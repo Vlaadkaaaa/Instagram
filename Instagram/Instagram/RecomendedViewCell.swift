@@ -8,8 +8,8 @@
 import UIKit
 
 /// Будущая настройка ячейки рекомендаций
-final class RecomendedCell: UITableViewCell {
+final class RecomendedViewCell: UITableViewCell {
 
-    @IBOutlet weak var label: UILabel!
-    
+    // MARK: - IBOutlet
+    @IBOutlet weak private var label: UILabel!
 }

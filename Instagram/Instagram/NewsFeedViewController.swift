@@ -10,6 +10,13 @@ import UIKit
 /// Лента новых пуликация
 final class NewsFeedViewController: UIViewController {
     
+   private enum TableCellTypes {
+        case stories
+        case startPost
+        case post
+        case recomended
+    }
+    
     // MARK: - Private Constant
     private enum Constant {
         static let storyCellIdentifier = "StoryCell"
@@ -17,11 +24,11 @@ final class NewsFeedViewController: UIViewController {
         static let recomendedMyCellIdentifier = "RecomendedMyCell"
         static let userOnePostName = "snoop"
         static let onePostTitle = "Hello, World!"
-        static let onePostImage = "snoop2"
+        static let onePostImageName = "snoop2"
         static let userTwoPostName = "buzova"
-        static let userTwoAvatarImage = "peopl2"
+        static let userTwoAvatarImageName = "peopl2"
         static let twoPostTitle = "Get high. Life is one"
-        static let twoPostImage = "buzova"
+        static let twoPostImageName = "buzova"
     }
     
     // MARK: - IBOutlet
@@ -29,29 +36,29 @@ final class NewsFeedViewController: UIViewController {
     
     // MARK: - Private Property
     private let contents = [Content(userName: Constant.userOnePostName,
-                                    userImage: UIImage(named: Constant.userOnePostName) ?? UIImage(),
-                                    title: Constant.onePostTitle,
-                                    image: UIImage(named: Constant.onePostImage) ?? UIImage()),
+                                    userImageName: Constant.userOnePostName, title: Constant.onePostTitle,
+                                    contentImageName: Constant.onePostImageName),
                             Content(userName: Constant.userTwoPostName,
-                                    userImage: UIImage(named: Constant.userTwoAvatarImage) ?? UIImage(),
+                                    userImageName: Constant.userTwoAvatarImageName,
                                     title: Constant.twoPostTitle,
-                                    image: UIImage(named: Constant.twoPostImage ) ?? UIImage())]
+                                    contentImageName: Constant.twoPostImageName)]
+    private var tableCellsTypesArray: [TableCellTypes] = [.stories, .startPost, .recomended, .post]
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshPage()
-
+        setupRefreshControl()
+        
     }
     
     // MARK: - Private func
-    private func refreshPage() {
+    private func setupRefreshControl() {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(refreshPageAction), for: .valueChanged)
         tableView.refreshControl = refresh
     }
     
-    @objc func refreshPageAction() {
+    @objc private func refreshPageAction() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.tableView.refreshControl?.endRefreshing()
         }
@@ -60,40 +67,63 @@ final class NewsFeedViewController: UIViewController {
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension NewsFeedViewController: UITableViewDataSource, UITableViewDelegate {
+   
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return tableCellsTypesArray.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contents.count + 2
+        let type = tableCellsTypesArray[section]
+        switch type {
+        case .startPost:
+            return 1
+        case .recomended:
+            return 1
+        case .stories:
+            return 1
+        case .post:
+            return contents.count - 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var content: Content
         let defaultCell = UITableViewCell()
+        let type = tableCellsTypesArray[indexPath.section]
         
-        switch indexPath.row {
-        case 0:
+        switch type {
+        case .startPost:
+            content = contents[indexPath.row]
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: Constant.userPostCellIdentifier,
+                for: indexPath) as? ContentViewCell else { return defaultCell }
+            cell.setContent(content: content)
+            cell.selectionStyle = .none
+            return cell
+        case .recomended:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.recomendedMyCellIdentifier,
+                                                           for: indexPath) as? RecomendedViewCell else {
+                return defaultCell }
+            cell.selectionStyle = .none
+            return cell
+        case .post:
+            content = contents[indexPath.row + 1]
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: Constant.userPostCellIdentifier,
+                for: indexPath) as? ContentViewCell else { return defaultCell }
+            cell.setContent(content: content)
+            cell.selectionStyle = .none
+            return cell
+        case .stories:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constant.storyCellIdentifier,
-                for: indexPath) as? StoriesCell else { return defaultCell }
+                for: indexPath) as? StoriesViewCell else { return defaultCell }
+            cell.selectionStyle = .none
             return cell
-        case 1:
-            content = contents[indexPath.row - 1]
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.userPostCellIdentifier,
-                                                           for: indexPath) as? ContentCell else { return defaultCell }
-            cell.setContent(content: content)
-            return cell
-        case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.recomendedMyCellIdentifier,
-                                                           for: indexPath) as? RecomendedCell else {
-                return defaultCell }
-            return cell
-        case 3:
-            content = contents[indexPath.row - 2]
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.userPostCellIdentifier,
-                                                           for: indexPath) as? ContentCell else { return defaultCell }
-            cell.setContent(content: content)
-            return cell
-        default: break
         }
-        
-        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
 }

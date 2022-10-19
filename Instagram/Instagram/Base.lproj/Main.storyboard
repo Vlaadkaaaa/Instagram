@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCell" rowHeight="115" id="dVA-sY-0YF" customClass="StoriesCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCell" rowHeight="115" id="dVA-sY-0YF" customClass="StoriesViewCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="dVA-sY-0YF" id="Afx-K8-tPf">
@@ -174,7 +174,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="buzova" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA3-6J-0lH">
-                                                                    <rect key="frame" x="205" y="93.333333333333329" width="40" height="16"/>
+                                                                    <rect key="frame" x="205" y="93.333333333333329" width="40" height="15.666666666666671"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="2FN-i1-YpI"/>
                                                                     </constraints>
@@ -183,7 +183,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pink" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z52-XU-e9a">
-                                                                    <rect key="frame" x="296" y="92.333333333333329" width="40" height="16"/>
+                                                                    <rect key="frame" x="296" y="92.333333333333329" width="40" height="15.666666666666671"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="DKX-uQ-6Ad"/>
                                                                     </constraints>
@@ -192,7 +192,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="broo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl2-Si-NZO">
-                                                                    <rect key="frame" x="387" y="91.333333333333329" width="40" height="16"/>
+                                                                    <rect key="frame" x="387" y="91.333333333333329" width="40" height="15.666666666666671"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="PMG-Bf-IPd"/>
                                                                     </constraints>
@@ -201,7 +201,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ivleeva" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-js-XAQ">
-                                                                    <rect key="frame" x="478" y="90.333333333333329" width="46" height="16"/>
+                                                                    <rect key="frame" x="478" y="90.333333333333329" width="46" height="15.666666666666671"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="K1I-wg-MEU"/>
                                                                     </constraints>
@@ -260,7 +260,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserPostCell" rowHeight="440" id="eZt-qN-MxQ" customClass="ContentCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserPostCell" rowHeight="440" id="eZt-qN-MxQ" customClass="ContentViewCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="159.66666603088379" width="390" height="440"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eZt-qN-MxQ" id="LYg-tD-wsG">
@@ -434,14 +434,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="contentImage" destination="hLT-7g-e6m" id="QCN-pa-7Zm"/>
-                                            <outlet property="title" destination="6Bj-JF-4Dx" id="2LZ-rn-hku"/>
-                                            <outlet property="userName" destination="zvG-hH-BZ5" id="ElA-32-4tu"/>
-                                            <outlet property="userName2" destination="sTM-ri-XSp" id="Pd7-VC-khb"/>
-                                            <outlet property="userPhoto" destination="RQy-4y-60U" id="rxz-Sq-cAg"/>
+                                            <outlet property="contentImageView" destination="hLT-7g-e6m" id="QCN-pa-7Zm"/>
+                                            <outlet property="titleLabel" destination="6Bj-JF-4Dx" id="2LZ-rn-hku"/>
+                                            <outlet property="userAvatarImageView" destination="RQy-4y-60U" id="rxz-Sq-cAg"/>
+                                            <outlet property="userNameLabel" destination="zvG-hH-BZ5" id="ElA-32-4tu"/>
+                                            <outlet property="userNameTwoLabel" destination="sTM-ri-XSp" id="Pd7-VC-khb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecomendedMyCell" rowHeight="350" id="BQv-2u-IXb" customClass="RecomendedCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecomendedMyCell" rowHeight="350" id="BQv-2u-IXb" customClass="RecomendedViewCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="599.66666603088379" width="390" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BQv-2u-IXb" id="mYr-TQ-TPu">
@@ -838,10 +838,10 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MyBlueColor">
-            <color red="0.050980392156862744" green="0.51764705882352935" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.050999999046325684" green="0.51800000667572021" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MyGrayColor">
-            <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MyWhiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

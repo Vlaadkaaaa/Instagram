@@ -8,6 +8,5 @@
 import UIKit
 
 /// Будущая настройка ячейки сторис
-final class StoriesCell: UITableViewCell {
-
+final class StoriesViewCell: UITableViewCell {
 }

@@ -8,16 +8,9 @@
 import UIKit
 
 /// Настройка контента
-final class Content {
+struct Content {
     var userName: String
-    var userImage: UIImage
+    var userImageName: String
     var title: String
-    var image: UIImage
-    
-    init(userName: String, userImage: UIImage, title: String, image: UIImage) {
-        self.userName = userName
-        self.userImage = userImage
-        self.title = title
-        self.image = image
-    }
+    var contentImageName: String
 }
