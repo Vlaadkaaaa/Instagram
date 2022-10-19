@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>InstagramSans-Bold.ttf</string>
+		<string>InstagramSans-Regular.ttf</string>
+		<string>Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf</string>
+		<string>Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
