@@ -795,7 +795,7 @@
         <scene sceneID="X47-jW-xMC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rjh-1n-y0D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Combined Shape-2" selectedImage="Combined Shape-Fill" id="tSa-fX-Kf7">
+                    <tabBarItem key="tabBarItem" title="" image="Combined Shape-2" selectedImage="Combined Shape - Fill" id="tSa-fX-Kf7">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -815,19 +815,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Collect-white" width="20" height="23"/>
-        <image name="Combined Shape-2" width="25" height="24"/>
-        <image name="Combined Shape-Fill" width="22" height="22"/>
-        <image name="Comment - Outline-White" width="24" height="23"/>
-        <image name="Direct-white" width="26" height="23"/>
-        <image name="Heart - Outline" width="25" height="22"/>
-        <image name="Heart - Outline-white" width="25" height="22"/>
-        <image name="Like" width="25" height="22"/>
-        <image name="More-white" width="16" height="3"/>
-        <image name="Profile" width="24" height="24"/>
+        <image name="Collect-white" width="19" height="23"/>
+        <image name="Combined Shape - Fill" width="22" height="22"/>
+        <image name="Combined Shape-2" width="24" height="24"/>
+        <image name="Comment - Outline-White" width="23" height="23"/>
+        <image name="Direct-white" width="25" height="23"/>
+        <image name="Heart - Outline" width="24" height="22"/>
+        <image name="Heart - Outline-white" width="24" height="22"/>
+        <image name="Like" width="24" height="22"/>
+        <image name="More-white" width="15" height="3"/>
+        <image name="Profile" width="23" height="23"/>
         <image name="Profile - Fill" width="23" height="23"/>
-        <image name="Union" width="24" height="25"/>
-        <image name="Union-2" width="25" height="25"/>
+        <image name="Union" width="23" height="24"/>
+        <image name="Union-2" width="24" height="24"/>
         <image name="cristiano" width="860" height="579"/>
         <image name="peopl2" width="358" height="367"/>
         <image name="people3" width="440" height="600"/>
