@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// 
+///  Заполнение данными 
 struct NotificationModel {
     var userAvatarImageName: String
     var userText: String

@@ -26,8 +26,7 @@
 		55D6475629002DCE0003DB10 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475529002DCE0003DB10 /* NotificationsTableViewController.swift */; };
 		55D6475829002E070003DB10 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475729002E070003DB10 /* NotificationModel.swift */; };
 		55D6475A29002F150003DB10 /* MentionedYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475929002F150003DB10 /* MentionedYouViewCell.swift */; };
-		55D6475D29002FC80003DB10 /* LikedYouPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475C29002FC80003DB10 /* LikedYouPhotoViewCell.swift */; };
-		55D6475F29002FDA0003DB10 /* LikedYouCommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475E29002FDA0003DB10 /* LikedYouCommentViewCell.swift */; };
+		55D6475F29002FDA0003DB10 /* LikedYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */; };
 		55D64761290030B20003DB10 /* SubscribeYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */; };
 		55D647632900311B0003DB10 /* IsOnInstViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D647622900311B0003DB10 /* IsOnInstViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -54,8 +53,7 @@
 		55D6475529002DCE0003DB10 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		55D6475729002E070003DB10 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		55D6475929002F150003DB10 /* MentionedYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionedYouViewCell.swift; sourceTree = "<group>"; };
-		55D6475C29002FC80003DB10 /* LikedYouPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedYouPhotoViewCell.swift; sourceTree = "<group>"; };
-		55D6475E29002FDA0003DB10 /* LikedYouCommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedYouCommentViewCell.swift; sourceTree = "<group>"; };
+		55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedYouViewCell.swift; sourceTree = "<group>"; };
 		55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYouViewCell.swift; sourceTree = "<group>"; };
 		55D647622900311B0003DB10 /* IsOnInstViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsOnInstViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,8 +132,7 @@
 				55D6475529002DCE0003DB10 /* NotificationsTableViewController.swift */,
 				55D6475729002E070003DB10 /* NotificationModel.swift */,
 				55D6475929002F150003DB10 /* MentionedYouViewCell.swift */,
-				55D6475C29002FC80003DB10 /* LikedYouPhotoViewCell.swift */,
-				55D6475E29002FDA0003DB10 /* LikedYouCommentViewCell.swift */,
+				55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */,
 				55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */,
 				55D647622900311B0003DB10 /* IsOnInstViewCell.swift */,
 			);
@@ -251,9 +248,8 @@
 				55D6472528FD93460003DB10 /* ContentViewCell.swift in Sources */,
 				55D6475A29002F150003DB10 /* MentionedYouViewCell.swift in Sources */,
 				55A3D5CE28FD3C9300A48C99 /* SceneDelegate.swift in Sources */,
-				55D6475F29002FDA0003DB10 /* LikedYouCommentViewCell.swift in Sources */,
+				55D6475F29002FDA0003DB10 /* LikedYouViewCell.swift in Sources */,
 				55D6472328FD8D0B0003DB10 /* Content.swift in Sources */,
-				55D6475D29002FC80003DB10 /* LikedYouPhotoViewCell.swift in Sources */,
 				55D6472728FE4F990003DB10 /* RecomendedViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,31 +7,18 @@
 
 import UIKit
 
-///
+/// Настройка ячейки с подпиской
 final class SubscribeYouViewCell: UITableViewCell {
     
-    // СДЕЛАТЬ USER DEFAULTS
-    
+    // MARK: - IBOutlet
     @IBOutlet weak private var userAvatarImageView: UIImageView!
-
+    @IBOutlet weak private var userTextLabel: UILabel!
     @IBOutlet weak private var subscribeButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-    func setup(_ content: NotificationModel) {
+    // MARK: - Public method
+    public func setup(_ content: NotificationModel) {
+        userAvatarImageView.layer.cornerRadius = userAvatarImageView.frame.height / 2
         userAvatarImageView.image = UIImage(named: content.userAvatarImageName)
-    }
-    
-    @IBAction func subscribeButtonAction(_ sender: Any) {
-        
+        userTextLabel.text = content.userText
     }
 }
