@@ -23,6 +23,12 @@
 		55D6472728FE4F990003DB10 /* RecomendedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6472628FE4F990003DB10 /* RecomendedViewCell.swift */; };
 		55D6472928FFAD720003DB10 /* StoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6472828FFAD720003DB10 /* StoriesViewCell.swift */; };
 		55D6474B28FFCFED0003DB10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D6474A28FFCFED0003DB10 /* Colors.xcassets */; };
+		55D6475629002DCE0003DB10 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475529002DCE0003DB10 /* NotificationsTableViewController.swift */; };
+		55D6475829002E070003DB10 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475729002E070003DB10 /* Notification.swift */; };
+		55D6475A29002F150003DB10 /* MentionedYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475929002F150003DB10 /* MentionedYouViewCell.swift */; };
+		55D6475F29002FDA0003DB10 /* LikedYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */; };
+		55D64761290030B20003DB10 /* SubscribeYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */; };
+		55D647632900311B0003DB10 /* OnInstViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D647622900311B0003DB10 /* OnInstViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		55D6472628FE4F990003DB10 /* RecomendedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedViewCell.swift; sourceTree = "<group>"; };
 		55D6472828FFAD720003DB10 /* StoriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewCell.swift; sourceTree = "<group>"; };
 		55D6474A28FFCFED0003DB10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		55D6475529002DCE0003DB10 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		55D6475729002E070003DB10 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		55D6475929002F150003DB10 /* MentionedYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionedYouViewCell.swift; sourceTree = "<group>"; };
+		55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedYouViewCell.swift; sourceTree = "<group>"; };
+		55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYouViewCell.swift; sourceTree = "<group>"; };
+		55D647622900311B0003DB10 /* OnInstViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnInstViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +91,8 @@
 				55D6471328FD68190003DB10 /* Font */,
 				55A3D5CB28FD3C9300A48C99 /* AppDelegate.swift */,
 				55A3D5CD28FD3C9300A48C99 /* SceneDelegate.swift */,
-				55A3D5CF28FD3C9300A48C99 /* NewsFeedViewController.swift */,
-				55D6472628FE4F990003DB10 /* RecomendedViewCell.swift */,
-				55D6472228FD8D0B0003DB10 /* Content.swift */,
-				55D6472428FD93460003DB10 /* ContentViewCell.swift */,
-				55D6472828FFAD720003DB10 /* StoriesViewCell.swift */,
+				55D6475B29002FA80003DB10 /* NotificationPage */,
+				55D64754290027A40003DB10 /* NewsFeedPage */,
 				55A3D5D128FD3C9300A48C99 /* Main.storyboard */,
 				55D6474A28FFCFED0003DB10 /* Colors.xcassets */,
 				55A3D5D428FD3C9600A48C99 /* Assets.xcassets */,
@@ -103,6 +112,31 @@
 				55D6471C28FD69850003DB10 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		55D64754290027A40003DB10 /* NewsFeedPage */ = {
+			isa = PBXGroup;
+			children = (
+				55A3D5CF28FD3C9300A48C99 /* NewsFeedViewController.swift */,
+				55D6472628FE4F990003DB10 /* RecomendedViewCell.swift */,
+				55D6472228FD8D0B0003DB10 /* Content.swift */,
+				55D6472428FD93460003DB10 /* ContentViewCell.swift */,
+				55D6472828FFAD720003DB10 /* StoriesViewCell.swift */,
+			);
+			path = NewsFeedPage;
+			sourceTree = "<group>";
+		};
+		55D6475B29002FA80003DB10 /* NotificationPage */ = {
+			isa = PBXGroup;
+			children = (
+				55D6475529002DCE0003DB10 /* NotificationsTableViewController.swift */,
+				55D6475729002E070003DB10 /* Notification.swift */,
+				55D6475929002F150003DB10 /* MentionedYouViewCell.swift */,
+				55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */,
+				55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */,
+				55D647622900311B0003DB10 /* OnInstViewCell.swift */,
+			);
+			path = NotificationPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,11 +238,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D6475829002E070003DB10 /* Notification.swift in Sources */,
 				55A3D5D028FD3C9300A48C99 /* NewsFeedViewController.swift in Sources */,
+				55D64761290030B20003DB10 /* SubscribeYouViewCell.swift in Sources */,
 				55A3D5CC28FD3C9300A48C99 /* AppDelegate.swift in Sources */,
+				55D6475629002DCE0003DB10 /* NotificationsTableViewController.swift in Sources */,
+				55D647632900311B0003DB10 /* OnInstViewCell.swift in Sources */,
 				55D6472928FFAD720003DB10 /* StoriesViewCell.swift in Sources */,
 				55D6472528FD93460003DB10 /* ContentViewCell.swift in Sources */,
+				55D6475A29002F150003DB10 /* MentionedYouViewCell.swift in Sources */,
 				55A3D5CE28FD3C9300A48C99 /* SceneDelegate.swift in Sources */,
+				55D6475F29002FDA0003DB10 /* LikedYouViewCell.swift in Sources */,
 				55D6472328FD8D0B0003DB10 /* Content.swift in Sources */,
 				55D6472728FE4F990003DB10 /* RecomendedViewCell.swift in Sources */,
 			);

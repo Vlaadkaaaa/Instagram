@@ -51,7 +51,7 @@ final class NewsFeedViewController: UIViewController {
         
     }
     
-    // MARK: - Private func
+    // MARK: Private Methods
     private func setupRefreshControl() {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(refreshPageAction), for: .valueChanged)
