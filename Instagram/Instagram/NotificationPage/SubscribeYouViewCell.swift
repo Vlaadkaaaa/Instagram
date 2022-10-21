@@ -16,7 +16,7 @@ final class SubscribeYouViewCell: UITableViewCell {
     @IBOutlet weak private var subscribeButton: UIButton!
     
     // MARK: - Public method
-    public func setup(_ content: NotificationModel) {
+    public func setup(_ content: Notification) {
         userAvatarImageView.layer.cornerRadius = userAvatarImageView.frame.height / 2
         userAvatarImageView.image = UIImage(named: content.userAvatarImageName)
         userTextLabel.text = content.userText

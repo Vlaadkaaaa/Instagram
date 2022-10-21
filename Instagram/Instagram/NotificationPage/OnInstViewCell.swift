@@ -8,7 +8,7 @@
 import UIKit
 
 /// Настройка ячейки "Есть в инстаграм"
-final class IsOnInstViewCell: UITableViewCell {
+final class OnInstViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     @IBOutlet weak private var userAvatarImageView: UIImageView!
@@ -16,7 +16,7 @@ final class IsOnInstViewCell: UITableViewCell {
     @IBOutlet weak private var subscribeButton: UIButton!
     
     // MARK: - Public method
-    public func setup(_ content: NotificationModel) {
+    public func setup(_ content: Notification) {
         userAvatarImageView.layer.cornerRadius = userAvatarImageView.frame.height / 2
         userAvatarImageView.image = UIImage(named: content.userAvatarImageName)
         userTextLabel.text = content.userText

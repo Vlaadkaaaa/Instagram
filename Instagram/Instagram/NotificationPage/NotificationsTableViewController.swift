@@ -47,33 +47,33 @@ final class NotificationsTableViewController: UITableViewController {
     
     // MARK: - Private properties
     private let contents = [
-        NotificationModel(userAvatarImageName: Constants.monkeyOneImageName,
-                          userText: Constants.userOneTextTitle,
-                          userLikedPhotoName: Constants.monkeyTenImageName),
-        NotificationModel(userAvatarImageName: Constants.monkeyTwoImageName,
-                          userText: Constants.userTwoTextTitle,
-                          userLikedPhotoName: Constants.monkeyEightImageName),
-        NotificationModel(userAvatarImageName: Constants.monkeyThreeImageName,
-                          userText: Constants.userThreeTextTitle,
-                          userLikedPhotoName: Constants.monkeyTwoImageName),
-        NotificationModel(userAvatarImageName: Constants.monkeyFourImageName,
-                          userText: Constants.userFourTextTitle,
-                          userLikedPhotoName: Constants.monkeyEightImageName),
-        NotificationModel(userAvatarImageName: Constants.monkeyFiveImageName,
-                          userText: Constants.userFiveTextTitle),
-        NotificationModel(userAvatarImageName: Constants.monkeySixImageName,
-                          userText: Constants.userSixTextTitle,
-                          userLikedPhotoName: Constants.monkeyTenImageName),
-        NotificationModel(userAvatarImageName: Constants.monkeySixImageName, userText: Constants.userSevenTextTitle),
-        NotificationModel(userAvatarImageName: Constants.monkeySevenImageName,
-                          userText: Constants.userEightTextTitle,
-                          userLikedPhotoName: Constants.monkeyNineImageName),
-        NotificationModel(userAvatarImageName: Constants.monkeySevenImageName,
-                          userText: Constants.userNineTextTitle,
-                          userLikedPhotoName: Constants.monkeyTenImageName),
+        Notification(userAvatarImageName: Constants.monkeyOneImageName,
+                     userText: Constants.userOneTextTitle,
+                     userLikedPhotoName: Constants.monkeyTenImageName),
+        Notification(userAvatarImageName: Constants.monkeyTwoImageName,
+                     userText: Constants.userTwoTextTitle,
+                     userLikedPhotoName: Constants.monkeyEightImageName),
+        Notification(userAvatarImageName: Constants.monkeyThreeImageName,
+                     userText: Constants.userThreeTextTitle,
+                     userLikedPhotoName: Constants.monkeyTwoImageName),
+        Notification(userAvatarImageName: Constants.monkeyFourImageName,
+                     userText: Constants.userFourTextTitle,
+                     userLikedPhotoName: Constants.monkeyEightImageName),
+        Notification(userAvatarImageName: Constants.monkeyFiveImageName,
+                     userText: Constants.userFiveTextTitle),
+        Notification(userAvatarImageName: Constants.monkeySixImageName,
+                     userText: Constants.userSixTextTitle,
+                     userLikedPhotoName: Constants.monkeyTenImageName),
+        Notification(userAvatarImageName: Constants.monkeySixImageName, userText: Constants.userSevenTextTitle),
+        Notification(userAvatarImageName: Constants.monkeySevenImageName,
+                     userText: Constants.userEightTextTitle,
+                     userLikedPhotoName: Constants.monkeyNineImageName),
+        Notification(userAvatarImageName: Constants.monkeySevenImageName,
+                     userText: Constants.userNineTextTitle,
+                     userLikedPhotoName: Constants.monkeyTenImageName),
     ]
     
-    private var tableCellsTypesArray: [TableSectionType] = [.now, .today, .yesterday, .lastWeek]
+    private var tableCellsTypes: [TableSectionType] = [.now, .today, .yesterday, .lastWeek]
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -95,48 +95,42 @@ final class NotificationsTableViewController: UITableViewController {
     }
     
     private func setupTableCell(_ indexPath: IndexPath) -> UITableViewCell {
-        let numberRow = indexPath.row
-        if numberRow == 0 {
+        let type = tableCellsTypes[indexPath.section]
+        switch type {
+        case .now:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.likedYouCellIdentifier,
                 for: indexPath) as? LikedYouViewCell else { return UITableViewCell() }
             cell.setup(contents[indexPath.row + indexPath.section])
             return cell
-        } else if numberRow == 1 {
+        case .today:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.mentionedYouCellIdentifier,
                 for: indexPath) as? MentionedYouViewCell else { return UITableViewCell() }
             cell.setup(contents[indexPath.row + indexPath.section + 1])
             return cell
-        } else if numberRow == 2 {
+        case .yesterday:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.subscrubeForYouCellIdentifier,
                 for: indexPath) as? SubscribeYouViewCell else { return UITableViewCell() }
             cell.setup(contents[indexPath.row + indexPath.section + 1])
             return cell
-        } else if numberRow == 3 {
+        case .lastWeek:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Constants.isOnInstCellIdentifier,
-                for: indexPath) as? IsOnInstViewCell else { return UITableViewCell() }
-            cell.setup(contents[indexPath.row + indexPath.section + 1])
-            return cell
-        } else if numberRow == 4 {
-            guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: Constants.mentionedYouCellIdentifier,
-                for: indexPath) as? LikedYouViewCell else { return UITableViewCell() }
+                for: indexPath) as? OnInstViewCell else { return UITableViewCell() }
             cell.setup(contents[indexPath.row + indexPath.section + 1])
             return cell
         }
-        return UITableViewCell()
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        tableCellsTypesArray.count
+        tableCellsTypes.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let type = tableCellsTypesArray[section]
+        let type = tableCellsTypes[section]
         switch type {
         case .now:
             return 2
@@ -159,6 +153,6 @@ final class NotificationsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return "\(tableCellsTypesArray[section])"
+        return "\(tableCellsTypes[section])"
     }
 }

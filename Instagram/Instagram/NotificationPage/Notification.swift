@@ -8,7 +8,7 @@
 import Foundation
 
 ///  Заполнение данными 
-struct NotificationModel {
+struct Notification {
     var userAvatarImageName: String
     var userText: String
     var userLikedPhotoName: String?
