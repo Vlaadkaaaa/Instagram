@@ -7,7 +7,7 @@
 
 import UIKit
 
-///
+/// Настройка ячейки лайков
 final class LikedYouViewCell: UITableViewCell {
     
     // MARK: - IBOutlet

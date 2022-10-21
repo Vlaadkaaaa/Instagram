@@ -20,7 +20,7 @@ final class NotificationsTableViewController: UITableViewController {
     
     // MARK: - Constant
     private enum Constants {
-    static let likedYouCellIdentifier = "LikedYouCell"
+        static let likedYouCellIdentifier = "LikedYouCell"
         static let mentionedYouCellIdentifier = "MentionedYouCell"
         static let subscrubeForYouCellIdentifier = "SubscrubeForYouCell"
         static let isOnInstCellIdentifier = "IsOnInstCell"
@@ -46,7 +46,6 @@ final class NotificationsTableViewController: UITableViewController {
     }
     
     // MARK: - Private properties
-    private var tableCellsTypesArray: [TableSectionType] = [.now, .today, .yesterday, .lastWeek]
     private let contents = [
         NotificationModel(userAvatarImageName: Constants.monkeyOneImageName,
                           userText: Constants.userOneTextTitle,
@@ -73,6 +72,8 @@ final class NotificationsTableViewController: UITableViewController {
                           userText: Constants.userNineTextTitle,
                           userLikedPhotoName: Constants.monkeyTenImageName),
     ]
+    
+    private var tableCellsTypesArray: [TableSectionType] = [.now, .today, .yesterday, .lastWeek]
     
     // MARK: - Life Cycle
     override func viewDidLoad() {

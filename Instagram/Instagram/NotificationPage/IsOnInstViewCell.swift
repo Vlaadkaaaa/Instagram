@@ -12,7 +12,7 @@ final class IsOnInstViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     @IBOutlet weak private var userAvatarImageView: UIImageView!
-    @IBOutlet weak var userTextLabel: UILabel!
+    @IBOutlet weak private var userTextLabel: UILabel!
     @IBOutlet weak private var subscribeButton: UIButton!
     
     // MARK: - Public method
