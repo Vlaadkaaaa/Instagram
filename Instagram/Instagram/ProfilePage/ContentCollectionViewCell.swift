@@ -10,5 +10,11 @@ import UIKit
 ///
 final class ContentCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
+    // MARK: - IBOutlet
+    @IBOutlet weak private var contentImageView: UIImageView!
+    
+    // MARK: - Methods
+    func setupView(_ content: ContentProfile) {
+        contentImageView.image = UIImage(named: content.contentImageName)
+    }
 }

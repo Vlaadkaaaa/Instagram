@@ -11,30 +11,60 @@ import UIKit
 final class ProfileTableViewController: UITableViewController {
     
     private enum TablleCell {
-    case header
+        case header
         case bio
         case topicalStory
         case content
     }
     
-    // MARK: - Private Property
-   private let countCell: [TablleCell] = [.header, .bio, .topicalStory, .content]
-    private let stories: [Stories] = [
-        Stories(storiesImageName: "monkeyOne", storiesText: "monkeyOne"),
-        Stories(storiesImageName: "monkeyTwo", storiesText: "monkeyTwo"),
-        Stories(storiesImageName: "monkeyThree", storiesText: "monkeyThree"),
-        Stories(storiesImageName: "monkeyFour", storiesText: "monkeyFour"),
-        Stories(storiesImageName: "monkeyFive", storiesText: "monkeyFive"),
-        Stories(storiesImageName: "monkeySix", storiesText: "monkeySix"),
-        Stories(storiesImageName: "monkeySeven", storiesText: "monkeySeven"),
-        Stories(storiesImageName: "monkeyNine", storiesText: "monkeyNine"),
-        Stories(storiesImageName: "monkeyTen", storiesText: "monkeyTen"),
-    ]
-    
-    // MARK: - Lyfe Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: - Private Constants
+    private enum Contants {
+        static let headerCellIdentifier = "HeaderCell"
+        static let bioCellIdentifier = "BioCell"
+        static let topicalStoriesCellIdentifier = "TopicalStoriesCell"
+        static let contentCellIdentifier = "ContentCell"
+        static let storyCollectionCellIdentifier = "StoryCollectionCell"
+        static let contentCollectionCellIdentifier = "ContentCollectionCell"
+        static let monkeyOneImageName = "monkeyOne"
+        static let monkeyTwoImageName = "monkeyTwo"
+        static let monkeyThreeImageName = "monkeyThree"
+        static let monkeyFourImageName = "monkeyFour"
+        static let monkeyFiveImageName = "monkeyFive"
+        static let monkeySixImageName = "monkeySix"
+        static let monkeySevenImageName = "monkeySeven"
+        static let monkeyEightImageName = "monkeyEight"
+        static let monkeyNineImageName = "monkeyNine"
+        static let monkeyTenImageName = "monkeyTen"
     }
+    
+    // MARK: - Private Property
+    private let countCell: [TablleCell] = [.header, .bio, .topicalStory, .content]
+    private let stories: [Stories] = [
+        Stories(storiesImageName: Contants.monkeyOneImageName, storiesText: Contants.monkeyOneImageName),
+        Stories(storiesImageName: Contants.monkeyTwoImageName, storiesText: Contants.monkeyTwoImageName),
+        Stories(storiesImageName: Contants.monkeyThreeImageName,
+                storiesText: Contants.monkeyThreeImageName),
+        Stories(storiesImageName: Contants.monkeyFourImageName, storiesText: Contants.monkeyFourImageName),
+        Stories(storiesImageName: Contants.monkeyFiveImageName, storiesText: Contants.monkeyFiveImageName),
+        Stories(storiesImageName: Contants.monkeySixImageName, storiesText: Contants.monkeySixImageName),
+        Stories(storiesImageName: Contants.monkeySevenImageName,
+                storiesText: Contants.monkeySevenImageName),
+        Stories(storiesImageName: Contants.monkeyNineImageName, storiesText: Contants.monkeyNineImageName),
+        Stories(storiesImageName: Contants.monkeyTenImageName, storiesText: Contants.monkeyTenImageName)
+    ]
+    private let contents: [ContentProfile] = [
+        ContentProfile(contentImageName: Contants.monkeyOneImageName),
+        ContentProfile(contentImageName: Contants.monkeyTwoImageName),
+        ContentProfile(contentImageName: Contants.monkeyThreeImageName),
+        ContentProfile(contentImageName: Contants.monkeyFourImageName),
+        ContentProfile(contentImageName: Contants.monkeyFiveImageName),
+        ContentProfile(contentImageName: Contants.monkeySixImageName),
+        ContentProfile(contentImageName: Contants.monkeySevenImageName),
+        ContentProfile(contentImageName: Contants.monkeyEightImageName),
+        ContentProfile(contentImageName: Contants.monkeyNineImageName),
+        ContentProfile(contentImageName: Contants.monkeyTenImageName),
+        ContentProfile(contentImageName: Contants.monkeyFiveImageName)
+    ]
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,26 +79,23 @@ final class ProfileTableViewController: UITableViewController {
         let type = countCell[indexPath.section]
         switch type {
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell",
-                                                        for: indexPath) 
-                return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Contants.headerCellIdentifier,
+                                                     for: indexPath)
+            return cell
         case .bio:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BioCell",
-                                                        for: indexPath)
-                return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Contants.bioCellIdentifier,
+                                                     for: indexPath)
+            return cell
             
         case .topicalStory:
-           if let cell = tableView.dequeueReusableCell(withIdentifier: "TopicalStoriesCell",
-                                                       for: indexPath) as? TopicalStoriesTableViewCell {
-                return cell
-           }
+            let cell = tableView.dequeueReusableCell(withIdentifier: Contants.topicalStoriesCellIdentifier,
+                                                     for: indexPath)
+            return cell
         case .content:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell",
-                                                        for: indexPath)
-                return cell
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: Contants.contentCellIdentifier,
+                                                     for: indexPath)
+            return cell
         }
-        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -78,30 +105,39 @@ final class ProfileTableViewController: UITableViewController {
 
 extension ProfileTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stories.count
+        switch collectionView.tag {
+        case 0:
+            return stories.count
+        case 1:
+            return contents.count
+        default: return 0
+        }
+    
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView.tag {
-        case 1:
+        case 0:
             let content = stories[indexPath.row]
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell",
-                                                             for: indexPath) as? StoryCollectionViewCell {
+            if let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: Contants.storyCollectionCellIdentifier,
+                for: indexPath) as? StoryCollectionViewCell {
                 cell.setup(content)
                 return cell
             }
-        case 2:
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCell",
-                                                             for: indexPath) as? ContentCollectionViewCell {
-                cell.imageView.image = UIImage(named: "monkeyTen")
-                
+        case 1:
+            let content = contents[indexPath.row]
+            if let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: Contants.contentCollectionCellIdentifier,
+                for: indexPath) as? ContentCollectionViewCell {
+                cell.setupView(content)
                 return cell
             }
         default: break
         }
-      
-            return UICollectionViewCell()
+        
+        return UICollectionViewCell()
     }
-
+    
 }
