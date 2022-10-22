@@ -7,7 +7,7 @@
 
 import Foundation
 
-///
+/// Контент пользователя
 struct ContentProfile {
     var contentImageName: String
 }

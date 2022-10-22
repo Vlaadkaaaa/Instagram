@@ -40,17 +40,24 @@ final class ProfileTableViewController: UITableViewController {
     // MARK: - Private Property
     private let countCell: [TablleCell] = [.header, .bio, .topicalStory, .content]
     private let stories: [Stories] = [
-        Stories(storiesImageName: Contants.monkeyOneImageName, storiesText: Contants.monkeyOneImageName),
-        Stories(storiesImageName: Contants.monkeyTwoImageName, storiesText: Contants.monkeyTwoImageName),
+        Stories(storiesImageName: Contants.monkeyOneImageName,
+                storiesText: Contants.monkeyOneImageName),
+        Stories(storiesImageName: Contants.monkeyTwoImageName,
+                storiesText: Contants.monkeyTwoImageName),
         Stories(storiesImageName: Contants.monkeyThreeImageName,
                 storiesText: Contants.monkeyThreeImageName),
-        Stories(storiesImageName: Contants.monkeyFourImageName, storiesText: Contants.monkeyFourImageName),
-        Stories(storiesImageName: Contants.monkeyFiveImageName, storiesText: Contants.monkeyFiveImageName),
-        Stories(storiesImageName: Contants.monkeySixImageName, storiesText: Contants.monkeySixImageName),
+        Stories(storiesImageName: Contants.monkeyFourImageName,
+                storiesText: Contants.monkeyFourImageName),
+        Stories(storiesImageName: Contants.monkeyFiveImageName,
+                storiesText: Contants.monkeyFiveImageName),
+        Stories(storiesImageName: Contants.monkeySixImageName,
+                storiesText: Contants.monkeySixImageName),
         Stories(storiesImageName: Contants.monkeySevenImageName,
                 storiesText: Contants.monkeySevenImageName),
-        Stories(storiesImageName: Contants.monkeyNineImageName, storiesText: Contants.monkeyNineImageName),
-        Stories(storiesImageName: Contants.monkeyTenImageName, storiesText: Contants.monkeyTenImageName)
+        Stories(storiesImageName: Contants.monkeyNineImageName,
+                storiesText: Contants.monkeyNineImageName),
+        Stories(storiesImageName: Contants.monkeyTenImageName,
+                storiesText: Contants.monkeyTenImageName)
     ]
     private let contents: [ContentProfile] = [
         ContentProfile(contentImageName: Contants.monkeyOneImageName),
@@ -66,7 +73,26 @@ final class ProfileTableViewController: UITableViewController {
         ContentProfile(contentImageName: Contants.monkeyFiveImageName)
     ]
     
-    // MARK: - Table view data source
+    // MARK: - Lyfe Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupRefreshControl()
+    }
+    
+    // MARK: Private Methods
+    private func setupRefreshControl() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(refreshPageAction), for: .valueChanged)
+        tableView.refreshControl = refresh
+    }
+    
+    @objc private func refreshPageAction() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    // MARK: - TableView DataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         return countCell.count
     }
@@ -103,6 +129,7 @@ final class ProfileTableViewController: UITableViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension ProfileTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag {
@@ -112,7 +139,6 @@ extension ProfileTableViewController: UICollectionViewDelegate, UICollectionView
             return contents.count
         default: return 0
         }
-    
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -136,7 +162,6 @@ extension ProfileTableViewController: UICollectionViewDelegate, UICollectionView
             }
         default: break
         }
-        
         return UICollectionViewCell()
     }
     

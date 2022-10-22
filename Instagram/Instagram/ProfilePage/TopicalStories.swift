@@ -7,7 +7,7 @@
 
 import Foundation
 
-///
+/// Настройка сторис
 struct Stories {
     var storiesImageName: String
     var storiesText: String

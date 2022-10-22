@@ -7,7 +7,7 @@
 
 import UIKit
 
-///
+/// Настройка показа контента пользователя
 final class ContentCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOutlet

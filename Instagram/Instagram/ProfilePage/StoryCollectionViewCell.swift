@@ -7,7 +7,7 @@
 
 import UIKit
 
-///
+///  Настройка показа сторис
 final class StoryCollectionViewCell: UICollectionViewCell {
 
     // MARK: - @IBOutlet
@@ -19,6 +19,5 @@ final class StoryCollectionViewCell: UICollectionViewCell {
         storiesImageView.layer.cornerRadius = storiesImageView.frame.height / 2
         storiesImageView.image =  UIImage(named: contnet.storiesImageName)
         nameLabel.text = contnet.storiesText
-        
     }
 }
