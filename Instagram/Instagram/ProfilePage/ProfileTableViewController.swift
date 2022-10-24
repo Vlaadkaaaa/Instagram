@@ -41,23 +41,23 @@ final class ProfileTableViewController: UITableViewController {
     private let countCell: [TablleCell] = [.header, .bio, .topicalStory, .content]
     private let stories: [Stories] = [
         Stories(storiesImageName: Contants.monkeyOneImageName,
-                storiesText: Contants.monkeyOneImageName),
+                storiesTitle: Contants.monkeyOneImageName),
         Stories(storiesImageName: Contants.monkeyTwoImageName,
-                storiesText: Contants.monkeyTwoImageName),
+                storiesTitle: Contants.monkeyTwoImageName),
         Stories(storiesImageName: Contants.monkeyThreeImageName,
-                storiesText: Contants.monkeyThreeImageName),
+                storiesTitle: Contants.monkeyThreeImageName),
         Stories(storiesImageName: Contants.monkeyFourImageName,
-                storiesText: Contants.monkeyFourImageName),
+                storiesTitle: Contants.monkeyFourImageName),
         Stories(storiesImageName: Contants.monkeyFiveImageName,
-                storiesText: Contants.monkeyFiveImageName),
+                storiesTitle: Contants.monkeyFiveImageName),
         Stories(storiesImageName: Contants.monkeySixImageName,
-                storiesText: Contants.monkeySixImageName),
+                storiesTitle: Contants.monkeySixImageName),
         Stories(storiesImageName: Contants.monkeySevenImageName,
-                storiesText: Contants.monkeySevenImageName),
+                storiesTitle: Contants.monkeySevenImageName),
         Stories(storiesImageName: Contants.monkeyNineImageName,
-                storiesText: Contants.monkeyNineImageName),
+                storiesTitle: Contants.monkeyNineImageName),
         Stories(storiesImageName: Contants.monkeyTenImageName,
-                storiesText: Contants.monkeyTenImageName)
+                storiesTitle: Contants.monkeyTenImageName)
     ]
     private let contents: [ContentProfile] = [
         ContentProfile(contentImageName: Contants.monkeyOneImageName),
@@ -92,7 +92,7 @@ final class ProfileTableViewController: UITableViewController {
         }
     }
     
-    // MARK: - TableView DataSource
+    // MARK: - TableView DataSource, Delegate
     override func numberOfSections(in tableView: UITableView) -> Int {
         return countCell.count
     }
@@ -149,7 +149,7 @@ extension ProfileTableViewController: UICollectionViewDelegate, UICollectionView
             if let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: Contants.storyCollectionCellIdentifier,
                 for: indexPath) as? StoryCollectionViewCell {
-                cell.setup(content)
+                cell.setupStories(content)
                 return cell
             }
         case 1:
@@ -157,7 +157,7 @@ extension ProfileTableViewController: UICollectionViewDelegate, UICollectionView
             if let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: Contants.contentCollectionCellIdentifier,
                 for: indexPath) as? ContentCollectionViewCell {
-                cell.setupView(content)
+                cell.setupContent(content)
                 return cell
             }
         default: break

@@ -155,9 +155,9 @@
 			children = (
 				55F475672902F14600C328A0 /* ProfileTableViewController.swift */,
 				55ABC3442903C8FD004A22F5 /* TopicalStories.swift */,
+				5582E0E3290408CD0091EA9F /* ContentProfile.swift */,
 				55ABC34029031DD6004A22F5 /* StoryCollectionViewCell.swift */,
 				55ABC342290323DB004A22F5 /* ContentCollectionViewCell.swift */,
-				5582E0E3290408CD0091EA9F /* ContentProfile.swift */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";

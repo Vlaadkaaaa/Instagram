@@ -14,7 +14,7 @@ final class ContentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var contentImageView: UIImageView!
     
     // MARK: - Methods
-    func setupView(_ content: ContentProfile) {
+    func setupContent(_ content: ContentProfile) {
         contentImageView.image = UIImage(named: content.contentImageName)
     }
 }

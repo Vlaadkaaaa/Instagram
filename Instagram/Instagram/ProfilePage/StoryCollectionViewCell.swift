@@ -15,9 +15,9 @@ final class StoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var nameLabel: UILabel!
     
     // MARK: - Methods
-    func setup(_ contnet: Stories) {
+    func setupStories(_ contnet: Stories) {
         storiesImageView.layer.cornerRadius = storiesImageView.frame.height / 2
         storiesImageView.image =  UIImage(named: contnet.storiesImageName)
-        nameLabel.text = contnet.storiesText
+        nameLabel.text = contnet.storiesTitle
     }
 }
