@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5582E0E4290408CD0091EA9F /* ContentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582E0E3290408CD0091EA9F /* ContentProfile.swift */; };
 		55A3D5CC28FD3C9300A48C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3D5CB28FD3C9300A48C99 /* AppDelegate.swift */; };
 		55A3D5CE28FD3C9300A48C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3D5CD28FD3C9300A48C99 /* SceneDelegate.swift */; };
 		55A3D5D028FD3C9300A48C99 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3D5CF28FD3C9300A48C99 /* NewsFeedViewController.swift */; };
 		55A3D5D328FD3C9300A48C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A3D5D128FD3C9300A48C99 /* Main.storyboard */; };
 		55A3D5D528FD3C9600A48C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A3D5D428FD3C9600A48C99 /* Assets.xcassets */; };
 		55A3D5D828FD3C9600A48C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A3D5D628FD3C9600A48C99 /* LaunchScreen.storyboard */; };
+		55ABC34129031DD6004A22F5 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABC34029031DD6004A22F5 /* StoryCollectionViewCell.swift */; };
+		55ABC343290323DB004A22F5 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABC342290323DB004A22F5 /* ContentCollectionViewCell.swift */; };
+		55ABC3452903C8FD004A22F5 /* TopicalStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABC3442903C8FD004A22F5 /* TopicalStories.swift */; };
 		55D6471828FD68410003DB10 /* InstagramSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55D6471428FD68400003DB10 /* InstagramSans-Bold.ttf */; };
 		55D6471928FD68410003DB10 /* InstagramSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55D6471528FD68400003DB10 /* InstagramSans-Regular.ttf */; };
 		55D6471E28FD69850003DB10 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55D6471C28FD69850003DB10 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */; };
@@ -29,9 +33,11 @@
 		55D6475F29002FDA0003DB10 /* LikedYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */; };
 		55D64761290030B20003DB10 /* SubscribeYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */; };
 		55D647632900311B0003DB10 /* OnInstViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D647622900311B0003DB10 /* OnInstViewCell.swift */; };
+		55F475682902F14600C328A0 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F475672902F14600C328A0 /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5582E0E3290408CD0091EA9F /* ContentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentProfile.swift; sourceTree = "<group>"; };
 		55A3D5C828FD3C9300A48C99 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A3D5CB28FD3C9300A48C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55A3D5CD28FD3C9300A48C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +46,9 @@
 		55A3D5D428FD3C9600A48C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55A3D5D728FD3C9600A48C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55A3D5D928FD3C9600A48C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55ABC34029031DD6004A22F5 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		55ABC342290323DB004A22F5 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		55ABC3442903C8FD004A22F5 /* TopicalStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicalStories.swift; sourceTree = "<group>"; };
 		55D6471428FD68400003DB10 /* InstagramSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstagramSans-Bold.ttf"; sourceTree = "<group>"; };
 		55D6471528FD68400003DB10 /* InstagramSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstagramSans-Regular.ttf"; sourceTree = "<group>"; };
 		55D6471C28FD69850003DB10 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf"; sourceTree = "<group>"; };
@@ -56,6 +65,7 @@
 		55D6475E29002FDA0003DB10 /* LikedYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedYouViewCell.swift; sourceTree = "<group>"; };
 		55D64760290030B20003DB10 /* SubscribeYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYouViewCell.swift; sourceTree = "<group>"; };
 		55D647622900311B0003DB10 /* OnInstViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnInstViewCell.swift; sourceTree = "<group>"; };
+		55F475672902F14600C328A0 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,7 @@
 				55D6471328FD68190003DB10 /* Font */,
 				55A3D5CB28FD3C9300A48C99 /* AppDelegate.swift */,
 				55A3D5CD28FD3C9300A48C99 /* SceneDelegate.swift */,
+				55F475692902F15700C328A0 /* ProfilePage */,
 				55D6475B29002FA80003DB10 /* NotificationPage */,
 				55D64754290027A40003DB10 /* NewsFeedPage */,
 				55A3D5D128FD3C9300A48C99 /* Main.storyboard */,
@@ -137,6 +148,18 @@
 				55D647622900311B0003DB10 /* OnInstViewCell.swift */,
 			);
 			path = NotificationPage;
+			sourceTree = "<group>";
+		};
+		55F475692902F15700C328A0 /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				55F475672902F14600C328A0 /* ProfileTableViewController.swift */,
+				55ABC3442903C8FD004A22F5 /* TopicalStories.swift */,
+				5582E0E3290408CD0091EA9F /* ContentProfile.swift */,
+				55ABC34029031DD6004A22F5 /* StoryCollectionViewCell.swift */,
+				55ABC342290323DB004A22F5 /* ContentCollectionViewCell.swift */,
+			);
+			path = ProfilePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,14 +261,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F475682902F14600C328A0 /* ProfileTableViewController.swift in Sources */,
 				55D6475829002E070003DB10 /* Notification.swift in Sources */,
+				55ABC3452903C8FD004A22F5 /* TopicalStories.swift in Sources */,
+				55ABC34129031DD6004A22F5 /* StoryCollectionViewCell.swift in Sources */,
 				55A3D5D028FD3C9300A48C99 /* NewsFeedViewController.swift in Sources */,
 				55D64761290030B20003DB10 /* SubscribeYouViewCell.swift in Sources */,
 				55A3D5CC28FD3C9300A48C99 /* AppDelegate.swift in Sources */,
 				55D6475629002DCE0003DB10 /* NotificationsTableViewController.swift in Sources */,
 				55D647632900311B0003DB10 /* OnInstViewCell.swift in Sources */,
 				55D6472928FFAD720003DB10 /* StoriesViewCell.swift in Sources */,
+				55ABC343290323DB004A22F5 /* ContentCollectionViewCell.swift in Sources */,
 				55D6472528FD93460003DB10 /* ContentViewCell.swift in Sources */,
+				5582E0E4290408CD0091EA9F /* ContentProfile.swift in Sources */,
 				55D6475A29002F150003DB10 /* MentionedYouViewCell.swift in Sources */,
 				55A3D5CE28FD3C9300A48C99 /* SceneDelegate.swift in Sources */,
 				55D6475F29002FDA0003DB10 /* LikedYouViewCell.swift in Sources */,
