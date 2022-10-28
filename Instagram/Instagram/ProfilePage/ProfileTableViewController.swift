@@ -94,7 +94,7 @@ final class ProfileTableViewController: UITableViewController {
     
     // MARK: - TableView DataSource, Delegate
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return countCell.count
+        countCell.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

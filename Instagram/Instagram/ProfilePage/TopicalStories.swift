@@ -9,6 +9,6 @@ import Foundation
 
 /// Настройка сторис
 struct Stories {
-    var storiesImageName: String
-    var storiesTitle: String
+    let storiesImageName: String
+    let storiesTitle: String
 }
